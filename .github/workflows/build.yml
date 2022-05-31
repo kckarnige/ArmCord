@@ -125,6 +125,8 @@ jobs:
               run: ls
             - name: Delete unwanted directories
               run: rm -rf {linux,macos,windows}/*/
+                   rm -rf {linux,macos,windows}/.icon*
+                   rm -rf {linux,macos,windows}/builder-debug.yml
             - name: ls dirs
               run: ls linux && ls macos && ls windows 
             - name: Get some values needed for the release
